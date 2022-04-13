@@ -1,65 +1,52 @@
-# Array : Collection of elements of the same data type with a fixed size
+# Classes/Type/ADT:A written description of the attributes and behaviors of an object
+## Blueprint
+# Object: An instance of a class.
+## A physical representation of the blueprint
+# Fields
+# Attributes: Instance Variables
+# Behaviors: Instance Methods
+## Syntax:
 
-# Defining an array
-    dataType [] nameOfArray = new dataType [] {element1, element2, element3, ..., elementN};
-    dataType [] nameOfArray = new dataType [size];
-    dataType [] nameOfArray = { element1, element2, element3 };
-
-# Index : start at zero, the first element of an array is in index zero
-
-# Examples:
-## Accessing Arrays:
-	int [] numbers = new int [100];
-    numbers[2]  --- > 0
-    [0,0,0,0,0,0,0,.........0]
-    
-    double [] numbers1 = new double [100];
-    numbers1[2]    --- > 0.0
-  
-    String [] names = {"Maria", "Azis", "Galin", "Galena"} ;
-    
-    names [0] ---> "Maria"
-    names [2] ---> "Galin"
-    names [3] ---> "Galena"
-    
-    int [] ages = {12,13,25,24, 32, 50, 47};
-    
-    ages[0] ----->12
-    ages[2] ----->25
-    
-    
-    double [] balances = new double [] {2.56, 12.57, 36.57, 57.89};
-    
-# Getting the length of the array
-   namesOfArray.length
+   accessModifier class NameOfClass 
    
-   names.length ---> 4
-   numbers.length ---> 100
+   }
+   
+#Behaviors: Constructors, setters & Getters, equals, toString, compareTo
+# Constructors: It is a special method, tat shares the same name as the class, it does not have a return type, it initializes te instance variables and Instantiate
+# Setters: Mutators, they modify the values of the instance variables 
+# Getters: Accessors, they retrieve the values of the instance variables
 
-# Modify the element at a specific index:
-  nameOfArray[index] = newElement;
-  
-  names [3] = "Celine Dion"; ---> {"Maria", "Azis", "Galin", "Celine Dion"};
-  
-#Last Index
-  names.length ---> 4
-  lastIndex ----> 3
-  lastIndex = length - 1 
-  
-  names[names.length -1]  --->
-  
-  
-  #  Looping 
+
+# Four Pillars of OOPL: Polymorphism, Encapsulation, Abstraction, inheritance
+
+- Polymorphism: Poly = Multiple, morphism = forms,
+- Encapsulation: Limiting the access to data by encapsulate it in private attributes and controlling access through setters and getters
+
+  public class Mammal {
+      private int numOfLegs;
+      private boolean hasFur;
+      private String species;
+   
+     public Mammal (){
+        this.numOfLegs = 2;
+        this.hasFur    = true;
+        this.species   = "bear"
+  }
      
-     for ( int i =0; i< names.length ; i++){
-        System.out.println(names[i]);
-     }
-     
-     for ( String name: names){
-       System.out.println(name);
-     }
-# Displaying the array     
-   
-   
-   Arrays.toString(names);
-          
+         public Mammal(int numOfLegs, boolean hasFur, String species) {
+           this.numOfLegs = numOfLegs;
+           this.hasfur    = hasFur;
+           this.species   = species;
+        }
+        
+        public void setNumOfLegs (int numOfLegs) {
+           this.numOfLegs = numOfLegs;
+           }
+           
+           public int getNumOfLegs()
+              return this.numOfLegs;
+           }
+           
+        }   
+           
+           }
